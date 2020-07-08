@@ -270,9 +270,9 @@
 	</extension>
 </addon>
 
-<addon id="skin.titan.vanilla" version="18.20.01.06" name="Titan Vanilla for Kodi Leia" provider-name="canuma,cartman.dos,malvinas2,marcelveldt,mardukL,mgonzales">
+<addon id="skin.titan.vanilla" version="19.20.07.08" name="Titan Vanilla for Kodi Matrix" provider-name="canuma,cartman.dos,malvinas2,marcelveldt,mardukL,mgonzales,yeahme49">
 	<requires>
-		<import addon="xbmc.gui" version="5.14.0" />
+		<import addon="xbmc.gui" version="5.15.0" />
 		<import addon="script.skinshortcuts" version="0.6.5"/>
 		<import addon="script.skin.helper.service" version="1.0.0"/>
         <import addon="script.skin.helper.widgets" version="1.0.0"/>
@@ -315,10 +315,9 @@
 		<summary lang="zh_CN">MediaPortal's Titan Vanilla for Kodi Leia 皮肤富含大量的功能。</summary>
 		<platform>all</platform>
 		<license>GPL v2.0</license>
-		<forum>https://forum.kodi.tv/showthread.php?tid=344342</forum>
-		<website>https://forum.kodi.tv/showthread.php?tid=344342</website>
-		<email>malvinas2@gmx.de</email>
-		<source>https://github.com/malvinas2/skin.titan.vanilla</source>
+		<forum>https://forum.kodi.tv/forumdisplay.php?fid=212</forum>
+		<website>https://forum.kodi.tv/forumdisplay.php?fid=212</website>
+		<source>https://github.com/yeahme49/yeahme49.github.io/tree/master/skin.titan.vanilla</source>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
