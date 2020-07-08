@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.titan-vanilla" name="Titan Vanilla Repo" version="1.0.0" provider-name="yeahme49">
+    <extension point="xbmc.addon.repository" name="Example Repository">
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/yeahme49/repository.titan-vanilla/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/yeahme49/repository.titan-vanilla/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/yeahme49/repository.titan-vanilla/master/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Titan Vanilla Repo</summary>
+        <description>Titan Vanilla repo (for Kodi 19)</description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
