@@ -1,0 +1,257 @@
+# Kodi language file
+# Addon Name: Metadata and Artwork module
+# Addon id: script.module.metadatautils
+# Addon Provider: marcelveldt, YLLOW_DRAGON
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC-Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"POT-Creation-Date: 2014-10-26 17:05+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE\n"
+"Language: uk_UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+msgctxt "#32000"
+msgid "PVR Artwork"
+msgstr "PVR"
+
+msgctxt "#32001"
+msgid "PVR metadata/artwork scraper"
+msgstr "PVR метадані/ілюстрації"
+
+msgctxt "#32002"
+msgid "Enable PVR artwork/metadata only for TV recordings"
+msgstr "Дозволити PVR метадані/ілюстрації для ТБ записів"
+
+msgctxt "#32003"
+msgid "Enable online scraper (tvdb,tmdb,fanart.tv)"
+msgstr "Дозволити онлайн скрапер (tvdb,tmdb,fanart.tv)"
+
+msgctxt "#32004"
+msgid "Allow Google Images as fallback for thumbs if primary scraping fails"
+msgstr "Дозволити Google зображення, як альтернативу"
+
+msgctxt "#32005"
+msgid "Lookup artwork in a custom folder (e.g. recordings folder)"
+msgstr "Перегляд ілюстрацій в папці користувача"
+
+msgctxt "#32006"
+msgid "- Path to the custom folder"
+msgstr "- Шлях до папки користувача"
+
+msgctxt "#32007"
+msgid "- Download artwork to my custom folder"
+msgstr "- Завантажити ілюстрації до папки користувача"
+
+msgctxt "#32008"
+msgid "Advanced section: finetune the scraper"
+msgstr "Розширений розділ: точно налаштувати скрапер"
+
+msgctxt "#32009"
+msgid "Use | as delimiter to enter multiple values"
+msgstr "Використовувати | як роздільник для декількох значень"
+
+msgctxt "#32010"
+msgid "Channels to ignore"
+msgstr "Ігнорувати канали"
+
+msgctxt "#32011"
+msgid "Titles to ignore"
+msgstr "Ігнорувати заголовки"
+
+msgctxt "#32012"
+msgid "Split title on character (use only first part)"
+msgstr "Розділити заголовки по символу"
+
+msgctxt "#32013"
+msgid "Characters to replace by space in title"
+msgstr "Замінити символи пробілом в заголовку"
+
+msgctxt "#32014"
+msgid "Characters to strip from title"
+msgstr "Видалити символи з заголовка"
+
+msgctxt "#32015"
+msgid "Music Artwork"
+msgstr "Музика"
+
+msgctxt "#32016"
+msgid "Provides rich metadata and artwork for skins and addons"
+msgstr "Музика метадані/ілюстрації"
+
+msgctxt "#32017"
+msgid "Works with both library and online sources (radio)"
+msgstr "Працює разом з бібліотекою і онлайн джерелами"
+
+msgctxt "#32018"
+msgid "Enable online scraper"
+msgstr "Дозволити онлайн скрапер"
+
+msgctxt "#32019"
+msgid "Lookup artwork in a custom folder"
+msgstr "Перегляд ілюстрацій в папці користувача"
+
+msgctxt "#32020"
+msgid "- Path to the custom folder"
+msgstr "- Шлях до папки користувача"
+
+msgctxt "#32021"
+msgid "Lookup artwork in my music folders (library)"
+msgstr "Перегляд ілюстрацій в музичних папках (бібліотека)"
+
+msgctxt "#32022"
+msgid "- Download (missing) artwork to my music folders"
+msgstr "- Завантажити відсут. ілюстрації в музичні папки"
+
+msgctxt "#32023"
+msgid "- Download (missing) artwork to my custom folder"
+msgstr "- Завантажити відсут. ілюстрації в папку користувача"
+
+msgctxt "#32024"
+msgid "Use custom Musicbrainz mirror"
+msgstr "Використовувати дзеркало Musicbrainz користувача"
+
+msgctxt "#32025"
+msgid "Skip if genre contains any of these genres"
+msgstr "Пропустити жанри"
+
+msgctxt "#32026"
+msgid "Skip news/weather/sports/commercial etc. (depends on correct epg info)"
+msgstr "Пропустити News/Weather/Sports/Commercial і т.д."
+
+msgctxt "#32027"
+msgid "One or more filters are active for this item. Are you sure you want to proceed ?"
+msgstr "Один або кілька фільтрів є активними для даного елемента. Ви впевнені, що хочете продовжити?"
+
+msgctxt "#32028"
+msgid "Refresh (auto lookup)"
+msgstr "Оновити (автоматичний пошук)"
+
+msgctxt "#32029"
+msgid "Refresh (manual lookup)"
+msgstr "Оновити (ручний пошук)"
+
+msgctxt "#32030"
+msgid "Remove channel from ignore list"
+msgstr "Видалити канал зі списку ігнорування"
+
+msgctxt "#32031"
+msgid "Add channel to ignore list"
+msgstr "Додати канал до списку ігнорування"
+
+msgctxt "#32032"
+msgid "Remove title from ignore list"
+msgstr "Видалити заголовок зі списку ігнорування"
+
+msgctxt "#32033"
+msgid "Add title to ignore list"
+msgstr "Додати заголовок в список ігнорування"
+
+msgctxt "#32034"
+msgid "Configure advanced settings"
+msgstr "Налаштування розширених можливостей"
+
+msgctxt "#32035"
+msgid "Settings for PVR artwork"
+msgstr "Налаштування для PVR ілюстрацій"
+
+msgctxt "#32036"
+msgid "Manual configure artwork"
+msgstr "Ручне налаштування ілюстрацій"
+
+msgctxt "#32037"
+msgid "Continuing"
+msgstr "Знімається"
+
+msgctxt "#32038"
+msgid "Ended"
+msgstr "Завершено"
+
+msgctxt "#32040"
+msgid "Released"
+msgstr "Прем'єра"
+
+msgctxt "#32041"
+msgid "Is the selected PVR Title a movie or tvshow ?"
+msgstr "Чи є вибране PVR назвою фільма або серіала?"
+
+msgctxt "#32042"
+msgid "Movie"
+msgstr "Фільми"
+
+msgctxt "#32043"
+msgid "Tvshow"
+msgstr "Серіали"
+
+msgctxt "#32044"
+msgid "Other"
+msgstr "Інше"
+
+msgctxt "#32045"
+msgid "Personal API key for Fanart.TV"
+msgstr "Персональний API ключ для Fanart.TV"
+
+msgctxt "#32046"
+msgid "see www.fanart.tv for more details about personal and VIP memberships"
+msgstr "дивіться www.fanart.tv для отримання більш докладної інформації"
+
+msgctxt "#32047"
+msgid "Scraper settings"
+msgstr "Налаштування скрапера"
+
+msgctxt "#32048"
+msgid "Enable theaudiodb for metadata/artwork"
+msgstr "Дозволити theaudiodb для метаданих/ілюстрацій"
+
+msgctxt "#32049"
+msgid "Enable TheAudioDb for metadata/artwork"
+msgstr "Дозволити TheAudioDb для метаданих/ілюстрацій"
+
+msgctxt "#32050"
+msgid "Enable last.fm for metadata"
+msgstr "Дозволити last.fm для метаданих"
+
+msgctxt "#32051"
+msgid "Enable fanart.tv for artwork"
+msgstr "Дозволити fanart.tv для ілюстрацій"
+
+msgctxt "#32052"
+msgid "API keys"
+msgstr "API ключі"
+
+msgctxt "#32053"
+msgid "Unlock full features by providing custom API keys"
+msgstr "Розблокуйте всі функції, додавши API ключі"
+
+msgctxt "#32054"
+msgid "Patreon API-key for omdbapi.com"
+msgstr "API-ключ Patreon для omdbapi.com"
+
+msgctxt "#32055"
+msgid "Personal developer API-key for TMDB"
+msgstr "Персональний API-ключ розробника для TMDB"
+
+msgctxt "#32056"
+msgid "Consider donating to these great projects providing you with great metadata"
+msgstr "Розгляньте можливість пожертвувань для цих чудових проектів, які надають Вам чудові метадані"
+
+msgctxt "#32057"
+msgid "Info"
+msgstr "Інфо"
+
+msgctxt "#32058"
+msgid "This modules uses the following sites/services to grab metadata"
+msgstr "У цих модулях використовуються наступні сайти/служби для захоплення метаданих"
+
+msgctxt "#32059"
+msgid "Enable debug logging (regardless of Kodi log level)"
+msgstr "Включити відладку (незалежно від рівня журналу Kodi)"
+
+msgctxt "#32060"
+msgid "Limit number of extrafanarts to download (0 is no limit)"
+msgstr "Обмежити кількість завантажуваних файлів (0 необмежена)"
