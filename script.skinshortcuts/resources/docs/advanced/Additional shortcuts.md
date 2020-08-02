@@ -33,7 +33,6 @@ Shortcut groupings within the management dialog are made up of several smaller g
  - addon-video
  - addon-audio
  - addon-image
- - addon-game
  - favourite
  
 If you do not specify a grouping, it will be added to the end of the common group.

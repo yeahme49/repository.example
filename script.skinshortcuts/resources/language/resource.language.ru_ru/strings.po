@@ -9,19 +9,12 @@ msgstr ""
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kodi Translation Team\n"
-"Language-Team: Russian (http://www.transifex.com/projects/p/xbmc-addons/language/ru_RU/)\n"
+"Language-Team: Russian (http://www.transifex.com/projects/p/xbmc-addons/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru_RU\n"
+"Language: ru\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-
-msgctxt "Addon Description"
-msgid ""
-
-"Дополнение для обложек, предоставляющее простой способ управления списками пользовательских ярлыков "
-"(требуется поддержка обложкой)"
-msgstr ""
 
 msgctxt "#32000"
 msgid "Add"
@@ -89,7 +82,7 @@ msgstr "Фильмы"
 
 msgctxt "#32016"
 msgid "TV Shows"
-msgstr "Сериалы"
+msgstr "ТВ передачи"
 
 msgctxt "#32017"
 msgid "Live TV"
@@ -133,7 +126,7 @@ msgstr "Выбрать эскиз"
 
 msgctxt "#32027"
 msgid "Change action"
-msgstr "Изменить действие"
+msgstr "Пользовательское действие"
 
 msgctxt "#32028"
 msgid "Reset shortcuts"
@@ -189,7 +182,7 @@ msgstr "Плейлист"
 
 msgctxt "#32041"
 msgid "Action"
-msgstr "Действие"
+msgstr "Боевик"
 
 msgctxt "#32042"
 msgid "Unknown video node"
@@ -209,11 +202,11 @@ msgstr "Выбрать фон"
 
 msgctxt "#32046"
 msgid "Update video library"
-msgstr "Обновить видео библиотеку"
+msgstr "Обновить видеотеку"
 
 msgctxt "#32047"
 msgid "Update audio library"
-msgstr "Обновить аудио библиотеку"
+msgstr "Обновить фонотеку"
 
 msgctxt "#32048"
 msgid "Choose shortcut"
@@ -221,7 +214,7 @@ msgstr "Выбрать ярлык"
 
 msgctxt "#32049"
 msgid "Building menu..."
-msgstr "Создание меню ..."
+msgstr "Построение меню..."
 
 msgctxt "#32050"
 msgid "Default"
@@ -257,120 +250,23 @@ msgstr "Команды Kodi"
 
 msgctxt "#32058"
 msgid "Create shortcut to here"
-msgstr "Сделать ярлык здесь"
+msgstr "Сделать ярлык сюда"
 
 msgctxt "#32059"
 msgid "Skin Playlist"
 msgstr "Обложка плейлиста"
 
-msgctxt "#32060"
-msgid "What do you want to do with the playlist?"
-msgstr "Что вы хотите сделать с плейлистом?"
-
 msgctxt "#32061"
 msgid "Display"
-msgstr "Показать"
+msgstr "Экран"
 
 msgctxt "#32062"
 msgid "Play"
-msgstr "Играть"
-
-msgctxt "#32063"
-msgid "Getting directory listing..."
-msgstr "Получение списка каталогов ..."
-
-msgctxt "#32064"
-msgid "No available items"
-msgstr "Нет доступных пунктов"
-
-msgctxt "#32065"
-msgid "There are no available items to choose from for the category that you choose."
-msgstr "Здесь нет доступных элементов на выбор для категории, которую вы выбираете."
-
-msgctxt "#32066"
-msgid "Last TV channel"
-msgstr "Последний ТВ канал"
-
-msgctxt "#32067"
-msgid "Last radio channel"
-msgstr "Последний радио канал"
-
-msgctxt "#32068"
-msgid "Last channel"
-msgstr "Последний канал"
-
-msgctxt "#32069"
-msgid "Video Source"
-msgstr "Видео источник"
+msgstr "Включить воспроизведение"
 
 msgctxt "#32070"
 msgid "UPnP"
 msgstr "UPnP"
-
-msgctxt "#32071"
-msgid "Customize Main Menu"
-msgstr "Настройка главного меню"
-
-msgctxt "#32072"
-msgid "Customize Submenu"
-msgstr "Настройка подменю"
-
-msgctxt "#32073"
-msgid "Music Source"
-msgstr "Музыкальный источник"
-
-msgctxt "#32074"
-msgid "Library Sources"
-msgstr "Источники библиотеки"
-
-msgctxt "#32075"
-msgid "Sources"
-msgstr "Источники"
-
-msgctxt "#32076"
-msgid "TV Channel"
-msgstr "ТВ каналы"
-
-msgctxt "#32077"
-msgid "Radio Channel"
-msgstr "Радио каналы"
-
-msgctxt "#32078"
-msgid "Display..."
-msgstr "Показать..."
-
-msgctxt "#32079"
-msgid "Files view"
-msgstr "Вид файлов"
-
-#. ::MENUNAME:: is used internally and should NOT be translated :)
-msgctxt "#32080"
-msgid "Edit ::MENUNAME:: Submenu"
-msgstr "Редактировать ::MENUNAME:: подменю"
-
-msgctxt "#32081"
-msgid "Movies not in this source"
-msgstr "В этом источнике нет фильмов"
-
-msgctxt "#32082"
-msgid "TV Shows not in this source"
-msgstr "В этом источнике нет сериалов"
-
-msgctxt "#32083"
-msgid "Music Videos not in this source"
-msgstr "В этом источнике нет музыкального видео"
-
-msgctxt "#32084"
-msgid "Songs not in this source"
-msgstr "В этом источнике нет песен"
-
-msgctxt "#32085"
-msgid "Albums not in this source"
-msgstr "В этом источнике нет альбомов"
-
-msgctxt "#32086"
-msgid "Mixed content not in this source"
-msgstr "В этом источнике нет смешанного содержимого"
 
 msgctxt "#32087"
 msgid "Radio"
@@ -380,160 +276,6 @@ msgctxt "#32088"
 msgid "Channels"
 msgstr "Каналы"
 
-msgctxt "#32089"
-msgid "Picture Source"
-msgstr "Источник фото"
-
-msgctxt "#32090"
-msgid "The item has been added to the menu"
-msgstr "Пункт был добавлен в меню"
-
-msgctxt "#32091"
-msgid "Unable to add item to the menu. Please check log for errors."
-msgstr "Невозможно добавить пункт в меню. Пожалуйста, проверьте содержимое файла журнала на наличие ошибок."
-
-msgctxt "#32092"
-msgid "Unable to build menu."
-msgstr "Невозможно создать меню."
-
-msgctxt "#32093"
-msgid "Upload debug log?"
-msgstr "Загрузить журнал отладки?"
-
-msgctxt "#32094"
-msgid "Install Kodi Log Uploader add-on to easily provide a debug log."
-msgstr "Установите Kodi Log Uploader дополнение для просмотра журнал отладки."
-
-msgctxt "#32095"
-msgid "Choose default action for menu item"
-msgstr "Выберите действие по умолчанию для пункта меню"
-
 msgctxt "#32096"
 msgid "Browse..."
 msgstr "Обзор…"
-
-msgctxt "#32097"
-msgid "Unable to save menu"
-msgstr "Невозможно сохранить меню"
-
-msgctxt "#32098"
-msgid "Writing menu..."
-msgstr "Запись меню ..."
-
-msgctxt "#32099"
-msgid "Widget"
-msgstr "Виджет"
-
-msgctxt "#32100"
-msgid "Use as widget"
-msgstr "Использовать как виджет"
-
-msgctxt "#32101"
-msgid "Choose property"
-msgstr "Выбрать свойство"
-
-msgctxt "#32102"
-msgid "Restore or reset?"
-msgstr "Восстановление или сброс?"
-
-msgctxt "#32103"
-msgid "Restore an original menu item"
-msgstr "Восстановить оригинальный пункт меню"
-
-msgctxt "#32104"
-msgid "Reset to skin defaults"
-msgstr "Восстановить значения по умолчанию для скина"
-
-msgctxt "#32105"
-msgid "There are no menu items to restore for this menu"
-msgstr "Здесь нет пунктов меню для восстановления этого меню"
-
-msgctxt "#32106"
-msgid "Install widget provider"
-msgstr "Установить поставщик виджетов"
-
-msgctxt "#32107"
-msgid "Enable default widgets"
-msgstr "Разрешить виджеты по умолчанию"
-
-msgctxt "#32108"
-msgid "Party mode (music videos)"
-msgstr "Режим "Вечеринка" (музыкальное видео)"
-
-msgctxt "#32109"
-msgid "No menus from compatible skins found to import"
-msgstr "Меню из совместимых скинов не найдено для импорта"
-
-msgctxt "#32110"
-msgid "Import menu from skin"
-msgstr "Импорт меню из скина"
-
-msgctxt "#32111"
-msgid "Shared menu"
-msgstr "Совместное меню"
-
-msgctxt "#32112"
-msgid "New item on the main menu"
-msgstr "Новый пункт в главном меню"
-
-msgctxt "#32113"
-msgid "New item on the main menu (autofill submenu items)"
-msgstr "Новый пункт в главном меню (автозаполнение пунктов подменю)"
-
-msgctxt "#32114"
-msgid "Where should menu item be created"
-msgstr "Где должен быть создан пункт меню"
-
-#: /resources/lib/nodefunctions.py
-msgctxt "#32115"
-msgid "Unable to get directory listings[CR][CR]See log for details"
-msgstr "Не удалось получить список каталогов [CR][CR] Смотрите подробности в логе"
-
-#: /default.py
-msgctxt "#32116"
-msgid "The skin you are using does not support adding items directly to the main menu"
-msgstr "Обложка не поддерживает добавление элементов непосредственно в главное меню"
-
-msgctxt "#32117"
-msgid "Disable shortcut"
-msgstr "Запертить ярлык"
-
-msgctxt "#32118"
-msgid "Smart shortcuts"
-msgstr "Умные ярлыки"
-
-msgctxt "#32119"
-msgid "Default widgets"
-msgstr "Виджеты по умолчанию"
-
-msgctxt "#32120"
-msgid "Never hide PVR shortcuts"
-msgstr "Никогда не скрывать ярлыки PVR"
-
-msgctxt "#32121"
-msgid "Share menu between compatible skins"
-msgstr "Делится меню между совместимыми обложками"
-
-msgctxt "#32122"
-msgid "Default widgets"
-msgstr "Виджеты по умолчанию"
-
-msgctxt "#32123"
-msgid "Enable debug logging"
-msgstr "Разрешить ведение журнала отладки"
-
-msgctxt "#32230"
-msgid "folder"
-msgstr "папка"
-
-msgctxt "#32231"
-msgid "item"
-msgstr "элемент"
-
-msgctxt "#32232"
-msgid "grouped"
-msgstr "группа"
-
-msgctxt "#32240"
-msgid "Game Add-On"
-msgstr "Игровое дополнение"
