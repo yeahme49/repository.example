@@ -14,10 +14,7 @@
 	</extension>
 </addon>
 
-<addon id="repository.titan-vanilla" name="Titan Vanilla Repo" version="1.0.1" provider-name="yeahme49">
-	<requires>
-		<import addon="repository.anontester"/>
-	</requires>
+<addon id="repository.titan-vanilla" name="Titan Vanilla Repo" version="1.0.2" provider-name="yeahme49">
     <extension point="xbmc.addon.repository" name="Example Repository">
         <dir>
             <info compressed="false">https://raw.githubusercontent.com/yeahme49/repository.titan-vanilla/master/zips/addons.xml</info>
