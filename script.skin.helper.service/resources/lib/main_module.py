@@ -157,7 +157,8 @@ class MainModule:
                     (not "!" + content_type.lower() in mediatypes) and not
                         getCondVisibility("Skin.HasSetting(SkinHelper.view.Disabled.%s)" % viewid)):
                     image = "special://skin/extras/viewthumbs/%s.jpg" % viewid
-                    listitem = xbmcgui.ListItem(label=label, iconImage=image)
+                    listitem = xbmcgui.ListItem(label=label)
+                    listitem.setArt({'icon': image})
                     listitem.setProperty("viewid", viewid)
                     listitem.setProperty("icon", image)
                     all_views.append(listitem)
@@ -192,7 +193,8 @@ class MainModule:
                 label = xbmc.getLocalizedString(int(view.attributes['languageid'].nodeValue))
                 desc = label + " (" + str(view_id) + ")"
                 image = "special://skin/extras/viewthumbs/%s.jpg" % view_id
-                listitem = xbmcgui.ListItem(label=label, label2=desc, iconImage=image)
+                listitem = xbmcgui.ListItem(label=label, label2=desc)
+                listitem.setArt({'icon': image})
                 listitem.setProperty("viewid", view_id)
                 if not getCondVisibility("Skin.HasSetting(SkinHelper.view.Disabled.%s)" % view_id):
                     listitem.select(selected=True)
@@ -259,7 +261,8 @@ class MainModule:
                 if media.get('art'):
                     if media['art'].get('thumb'):
                         image = (media['art']['thumb'])
-                listitem = xbmcgui.ListItem(label=label, label2=label2, iconImage=image)
+                listitem = xbmcgui.ListItem(label=label, label2=label2)
+                listitem.setArt({'icon': image})
                 listitem.setProperty("path", media["file"])
                 results.append(listitem)
 
@@ -403,25 +406,19 @@ class MainModule:
     def setkodisetting(self):
         '''set kodi setting'''
         settingname = self.params.get("setting", "")
-        value = self.params.get("value", "")
-        is_int = False
-        try:
-            valueint = int(value)
-            is_int = True
-            del valueint
-        except Exception:
-            pass
-        if value.lower() in ["true", "false"]:
-            value = value.lower()
-        elif not is_int:
-            value = '"%s"' % value
-        params = {"setting": settingname, "value": value}
-        kodi_json("Settings.SetSettingValue", params)
+        value = self.params.get("value", '')
+        numvalue = self.params.get("numvalue", '')
+        if numvalue:
+            value = '%s' % numvalue 
+        else:
+            value = '"%s"' % value   
+        xbmc.executeJSONRPC('{"jsonrpc":"2.0", "id":1, "method":"Settings.SetSettingValue",\
+            "params":{"setting":"%s","value":%s}}' % (settingname, value))
 
     def playtrailer(self):
         '''auto play windowed trailer inside video listing'''
         if not getCondVisibility("Container.Scrolling | Container.OnNext | "
-                                      "Container.OnPrevious | !IsEmpty(Window(Home).Property(traileractionbusy))"):
+                                      "Container.OnPrevious | !String.IsEmpty(Window(Home).Property(traileractionbusy))"):
             self.win.setProperty("traileractionbusy", "traileractionbusy")
             widget_container = self.params.get("widgetcontainer", "")
             trailer_mode = self.params.get("mode", "").replace("auto_", "")
@@ -510,7 +507,6 @@ class MainModule:
 
     def videosearch(self):
         '''show the special search dialog'''
-        xbmc.executebuiltin("ActivateWindow(busydialog)")
         from resources.lib.searchdialog import SearchDialog
         search_dialog = SearchDialog("script-skin_helper_service-CustomSearch.xml",
                                  try_decode(self.addon.getAddonInfo('path')), "Default", "1080i")
@@ -528,16 +524,17 @@ class MainModule:
         '''helper to delete a directory, input can be normal filesystem path or vfs'''
         del_path = self.params.get("path")
         if del_path:
-            ret = xbmcgui.Dialog().yesno(heading=xbmc.getLocalizedString(122),
-                                         line1="%s[CR]%s" % (xbmc.getLocalizedString(125), del_path))
+            ret = xbmcgui.Dialog().yesno(
+                    message="%s" % (xbmc.getLocalizedString(125)),
+                    heading=xbmc.getLocalizedString(122))
             if ret:
                 success = recursive_delete_dir(del_path)
                 if success:
                     xbmcgui.Dialog().ok(heading=xbmc.getLocalizedString(19179),
-                                        line1=self.addon.getLocalizedString(32014))
+                                        message=self.addon.getLocalizedString(32014), line2=self.addon.getLocalizedString(32014))
                 else:
                     xbmcgui.Dialog().ok(heading=xbmc.getLocalizedString(16205),
-                                        line1=xbmc.getLocalizedString(32015))
+                                        message=xbmc.getLocalizedString(32015), line2=self.addon.getLocalizedString(32014))
 
     def overlaytexture(self):
         '''legacy: helper to let the user choose a background overlay from a skin defined folder'''
@@ -596,7 +593,7 @@ class MainModule:
         headertxt = clean_string(self.params.get("header", ""))
         bodytxt = clean_string(self.params.get("message", ""))
         dialog = xbmcgui.Dialog()
-        dialog.ok(heading=headertxt, line1=bodytxt)
+        dialog.ok(heading=headertxt, message=bodytxt)
         del dialog
 
     def dialogyesno(self):
@@ -605,12 +602,12 @@ class MainModule:
         bodytxt = clean_string(self.params.get("message", ""))
         yesactions = self.params.get("yesaction", "").split("|")
         noactions = self.params.get("noaction", "").split("|")
-        if xbmcgui.Dialog().yesno(heading=headertxt, line1=bodytxt):
+        if xbmcgui.Dialog().yesno(heading=headertxt, message=bodytxt):
             for action in yesactions:
-                xbmc.executebuiltin(action.encode("utf-8"))
+                xbmc.executebuiltin(action)
         else:
             for action in noactions:
-                xbmc.executebuiltin(action.encode("utf-8"))
+                xbmc.executebuiltin(action)
 
     def textviewer(self):
         '''helper to show a textviewer dialog with a message'''

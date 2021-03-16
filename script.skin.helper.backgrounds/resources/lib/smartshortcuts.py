@@ -11,11 +11,11 @@ The most important behaviour of the smart shortcuts feature is that is pulls ima
 so you can have content based backgrounds.
 '''
 
-from resources.lib.utils import get_content_path, log_msg, log_exception, ADDON_ID
+from .utils import get_content_path, log_msg, log_exception, ADDON_ID
 import xbmc
 import xbmcvfs
 import xbmcaddon
-
+import os, sys
 
 class SmartShortCuts():
     '''Smart shortcuts listings'''
@@ -30,8 +30,12 @@ class SmartShortCuts():
     def get_smartshortcuts_nodes(self):
         '''return all smartshortcuts paths for which an image should be generated'''
         nodes = []
-        for value in self.all_nodes.values():
-            nodes += value
+        if sys.version_info.major == 3:
+            for value in self.all_nodes.values():
+                nodes += value
+        else:
+            for value in self.all_nodes.itervalues():
+                nodes += value
         return nodes
 
     def build_smartshortcuts(self):
@@ -233,7 +237,7 @@ class SmartShortCuts():
                         except Exception:
                             log_msg("Error while processing smart shortcuts for playlist %s  --> "
                                     "This file seems to be corrupted, please remove it from your system "
-                                    "to prevent any further errors." % item["file"], xbmc.LOGWARNING)
+                                    "to prevent any further errors." % item["file"], xbmc.LOGINFO)
             self.all_nodes["playlists"] = nodes
 
     def favourites_nodes(self):

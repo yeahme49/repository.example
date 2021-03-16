@@ -5,20 +5,24 @@
     script.skin.helper.backgrounds
     a helper service for Kodi skins providing rotating backgrounds
 '''
-import os, sys
+
 import threading
-import _thread as thread
 import random
+import os, sys
+if sys.version_info.major == 3:
+    import _thread as thread
+else:
+    import thread
 from datetime import timedelta
-from resources.lib.utils import log_msg, log_exception, get_content_path, urlencode, ADDON_ID
+from .utils import log_msg, log_exception, get_content_path, urlencode, ADDON_ID
 import xbmc
 import xbmcvfs
 import xbmcaddon
 import xbmcgui
 from simplecache import SimpleCache
-from resources.lib.conditional_backgrounds import get_cond_background
-from resources.lib.smartshortcuts import SmartShortCuts
-from resources.lib.wallimages import WallImages
+from .conditional_backgrounds import get_cond_background
+from .smartshortcuts import SmartShortCuts
+from .wallimages import WallImages
 from metadatautils import MetadataUtils
 
 
@@ -87,7 +91,7 @@ class BackgroundsUpdater(threading.Thread):
                     self.smartshortcuts.build_smartshortcuts()
                     self.report_allbackgrounds()
                     self.winpropcache(True)
-
+                    
                 if self.exit:
                     break
 
@@ -100,7 +104,7 @@ class BackgroundsUpdater(threading.Thread):
                 if self.backgrounds_delay and backgrounds_task_interval >= self.backgrounds_delay:
                     backgrounds_task_interval = 0
                     self.update_backgrounds()
-
+                    
                 if self.exit:
                     break
 
@@ -136,7 +140,7 @@ class BackgroundsUpdater(threading.Thread):
             # skinner can enable manual wall images generation so check for these settings
             # store in memory so wo do not have to query the skin settings too often
             if self.walls_delay:
-                for key in iter(self.all_backgrounds_keys.keys()):
+                for key in self.all_backgrounds_keys:
                     limitrange = xbmc.getInfoLabel("Skin.String(%s.EnableWallImages)" % key)
                     if limitrange:
                         self.wallimages.manual_walls[key] = int(limitrange)
@@ -165,8 +169,15 @@ class BackgroundsUpdater(threading.Thread):
             if cache:
                 for key, value in cache.items():
                     if value:
-                        self.win.setProperty(key, value)
-
+                        if sys.version_info.major < 3:
+                            if isinstance(value, unicode):
+                                value = value.encode("utf-8")
+                            if isinstance(key):
+                                key = key
+                            self.win.setProperty(key, value)
+                        else:
+                            self.win.setProperty(key, value)
+                            
     def get_images_from_vfspath(self, lib_path):
         '''get all images from the given vfs path'''
         result = []
@@ -251,6 +262,7 @@ class BackgroundsUpdater(threading.Thread):
                             random.shuffle(files2)
                             for count, filename in enumerate(files2):
                                 if (filename.endswith(".jpg") or filename.endswith(".png")) and count < 6:
+                                    filename = filename
                                     image = os.path.join(item, filename)
                                     images.append({"fanart": image, "title": filename})
         return images
@@ -320,7 +332,7 @@ class BackgroundsUpdater(threading.Thread):
         self.set_image(win_prop, image, fallback_image)
         return image
 
-
+    
     def set_image(self, win_prop, image, fallback_image):
         ''' actually set the image window property'''
         if image:
@@ -354,7 +366,7 @@ class BackgroundsUpdater(threading.Thread):
         if not self.pvr_bg_recordingsonly:
             tv_images = self.get_images_from_vfspath(
                 "plugin://script.skin.helper.widgets/?mediatype=pvr"
-                "&action=channels&limit=25&reload=%s" % widgetreload)
+                "&action=channels&limit=20&reload=%s" % widgetreload)
             if tv_images:  # result can be None
                 images += tv_images
         return images

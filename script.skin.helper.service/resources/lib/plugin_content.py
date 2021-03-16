@@ -149,7 +149,7 @@ class PluginContent:
 
     def widgets(self):
         '''called from skinshortcuts to retrieve listing of all widgetss'''
-        log_msg("skinhelperservice plugin allwidgets function", xbmc.LOGWARNING)
+        log_msg("skinhelperservice plugin allwidgets function", xbmc.LOGINFO)
         if sys.version_info.major == 3:
             from . import skinshortcuts
         else:
@@ -158,7 +158,7 @@ class PluginContent:
 
     def resourceimages(self):
         '''retrieve listing of specific resource addon images'''
-        log_msg("skinhelperservice plugin resourceimages function", xbmc.LOGWARNING)
+        log_msg("skinhelperservice plugin resourceimages function", xbmc.LOGWINFO)
         if sys.version_info.major == 3:
             from .resourceaddons import get_resourceimages
         else:
@@ -172,7 +172,7 @@ class PluginContent:
 
     def extrafanart(self):
         '''helper to display extrafanart in multiimage control in the skin'''
-        log_msg("skinhelperservice plugin extrafanart function", xbmc.LOGWARNING)
+        log_msg("skinhelperservice plugin extrafanart function", xbmc.LOGINFO)
         fanarts = eval(self.params["fanarts"])
         # process extrafanarts
         for count, item in enumerate(fanarts):
@@ -183,7 +183,7 @@ class PluginContent:
 
     def extraposter(self):
         '''helper to display extraposter in multiimage control in the skin'''
-        log_msg("skinhelperservice plugin extraposter function", xbmc.LOGWARNING)
+        log_msg("skinhelperservice plugin extraposter function", xbmc.LOGINFO)
         posters = eval(self.params["posters"])
         # process extraposters
         for count, item in enumerate(posters):
@@ -313,8 +313,8 @@ class PluginContent:
         # process listing with the results...
         for cast in all_cast:
             if cast.get("name") not in all_cast_names:
-                liz = xbmcgui.ListItem(label=cast.get("name"), label2=cast.get("role"),
-                                       iconImage=cast.get("thumbnail"))
+                liz = xbmcgui.ListItem(label=cast.get("name"), label2=cast.get("role"))
+                liz.setArt({"thumb":cast.get("thumbnail")})
                 if extended_cast_action:
                     url = "RunScript(script.extendedinfo,info=extendedactorinfo,name=%s)" % cast.get("name")
                     url = "plugin://script.skin.helper.service/?action=launch&path=%s" % url
@@ -336,7 +336,7 @@ class PluginContent:
             for i in range(int(xbmc.getInfoLabel("Container.NumItems"))):
                 all_letters.append(xbmc.getInfoLabel("Listitem(%s).SortLetter" % i).upper())
             start_number = ""
-            for number in ["2", "3", "4", "5", "6", "7", "8", "9"]:
+            for number in ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]:
                 if number in all_letters:
                     start_number = number
                     break
@@ -361,27 +361,29 @@ class PluginContent:
             xbmcplugin.setResolvedUrl(handle=int(sys.argv[1]), succeeded=False, listitem=xbmcgui.ListItem())
         letter = self.params.get("letter", "").upper()
         jumpcmd = ""
-        if letter in ["A", "B", "C", "2"]:
-            jumpcmd = "2"
-        elif letter in ["D", "E", "F", "3"]:
-            jumpcmd = "3"
-        elif letter in ["G", "H", "I", "4"]:
-            jumpcmd = "4"
-        elif letter in ["J", "K", "L", "5"]:
-            jumpcmd = "5"
-        elif letter in ["M", "N", "O", "6"]:
-            jumpcmd = "6"
-        elif letter in ["P", "Q", "R", "S", "7"]:
-            jumpcmd = "7"
-        elif letter in ["T", "U", "V", "8"]:
-            jumpcmd = "8"
-        elif letter in ["W", "X", "Y", "Z", "9"]:
-            jumpcmd = "9"
+        if letter in ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]:
+            jumpcmd = "firstpage"
+        elif letter in ["A", "B", "C"]:
+            jumpcmd = "jumpsms2"
+        elif letter in ["D", "E", "F"]:
+            jumpcmd = "jumpsms3"
+        elif letter in ["G", "H", "I"]:
+            jumpcmd = "jumpsms4"
+        elif letter in ["J", "K", "L"]:
+            jumpcmd = "jumpsms5"
+        elif letter in ["M", "N", "O"]:
+            jumpcmd = "jumpsms6"
+        elif letter in ["P", "Q", "R", "S"]:
+            jumpcmd = "jumpsms7"
+        elif letter in ["T", "U", "V"]:
+            jumpcmd = "jumpsms8"
+        elif letter in ["W", "X", "Y", "Z"]:
+            jumpcmd = "jumpsms9"
         if jumpcmd:
             xbmc.executebuiltin("SetFocus(50)")
             for i in range(40):
                 xbmc.executeJSONRPC('{ "jsonrpc": "2.0", "method": "Input.ExecuteAction",\
-                    "params": { "action": "jumpsms%s" }, "id": 1 }' % (jumpcmd))
+                    "params": { "action": "%s" }, "id": 1 }' % (jumpcmd))
                 xbmc.sleep(50)
                 if xbmc.getInfoLabel("ListItem.Sortletter").upper() == letter:
                     break

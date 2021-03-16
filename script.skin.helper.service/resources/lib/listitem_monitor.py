@@ -186,7 +186,7 @@ class ListItemMonitor(threading.Thread):
         cont_prefix = ""
         try:
             widget_container = try_decode(self.win.getProperty("SkinHelper.WidgetContainer"))
-            if getCondVisibility("Window.IsActive(movieinformation)"):
+            if getCondVisibility("Window.IsActive(movieinformation)|Window.IsActive(DialogPVRInfo.xml)|Window.IsActive(DialogMusicInfo.xml)|Window.IsActive(script-script.extendedinfo-DialogVideoInfo.xml)"):
                 cont_prefix = ""
                 cur_folder = try_decode(xbmc.getInfoLabel(
                     "$INFO[Window.Property(xmlfile)]$INFO[Container.FolderPath]"
@@ -365,7 +365,7 @@ class ListItemMonitor(threading.Thread):
                                 details["imdbnumber"], tvdbid))
 
                     # movies-only properties (tmdb, animated art)
-                    if content_type in ["movies", "setmovies"]:
+                    if content_type in ["movies", "setmovies", "tvshows"]:
                         details = merge_dict(details, self.metadatautils.get_tmdb_details(details["imdbnumber"]))
                         if details["imdbnumber"] and self.enable_animatedart:
                             details = self.metadatautils.extend_dict(
@@ -605,7 +605,7 @@ class ListItemMonitor(threading.Thread):
         if self.enable_forcedviews:
             cur_forced_view = xbmc.getInfoLabel("Skin.String(SkinHelper.ForcedViews.%s)" % content_type)
             if getCondVisibility(
-                    "Control.IsVisible(%s) | IsEmpty(Container.Viewmode) | System.HasModalDialog | System.HasVisibleModalDialog" % cur_forced_view):
+                    "Control.IsVisible(%s) | String.IsEmpty(Container.Viewmode) | System.HasModalDialog | System.HasVisibleModalDialog" % cur_forced_view):
                 # skip if the view is already visible or if we're not in an actual media window
                 return
             if (content_type and cur_forced_view and cur_forced_view != "None" and not

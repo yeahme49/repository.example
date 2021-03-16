@@ -254,7 +254,7 @@ class SkinSettings:
         rich_layout = False
         listitems = []
         if sublevel:
-            listitem = xbmcgui.ListItem(label="..", iconImage="DefaultFolderBack.png")
+            listitem = xbmcgui.ListItem(label="..")
             listitem.setProperty("icon", "DefaultFolderBack.png")
             listitem.setProperty("value", "||BACK||")
             listitems.append(listitem)
@@ -274,7 +274,8 @@ class SkinSettings:
                     label = label % value
                 if value == "||MULTISELECT||" or item["settingoptions"]:
                     return self.multi_select(item["settingoptions"], window_header)
-                listitem = xbmcgui.ListItem(label, iconImage=icon, label2=item["description"])
+                listitem = xbmcgui.ListItem(label, label2=item["description"])
+                listitem.setArt({'icon': icon})
                 listitem.setProperty("value", value)
                 listitem.setProperty("icon", icon)
                 listitem.setProperty("description", item["description"])
@@ -449,7 +450,6 @@ class SkinSettings:
     def select_image(self, skinstring, allow_multi=True, windowheader="",
                      resource_addon="", skinhelper_backgrounds=False, current_value=""):
         '''helper which lets the user select an image or imagepath from resourceaddons or custom path'''
-        xbmc.executebuiltin("ActivateWindow(busydialog)")
         images = []
         if not windowheader:
             windowheader = self.addon.getLocalizedString(32020)
@@ -491,14 +491,14 @@ class SkinSettings:
         # create listitems
         listitems = []
         for label, imagepath, label2, icon in images:
-            listitem = xbmcgui.ListItem(label=label, label2=label2, iconImage=icon)
+            listitem = xbmcgui.ListItem(label=label, label2=label2)
+            listitem.setArt({"icon": 'icon'})
             listitem.setPath(imagepath)
             listitems.append(listitem)
 
         # show select dialog with choices
         dialog = DialogSelect("DialogSelect.xml", "", listing=listitems, windowtitle=windowheader, richlayout=True,
                               getmorebutton=resource_addon, autofocuslabel=current_value)
-        xbmc.executebuiltin("Dialog.Close(busydialog)")
         dialog.doModal()
         result = dialog.result
         del dialog

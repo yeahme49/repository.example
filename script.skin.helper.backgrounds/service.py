@@ -21,6 +21,6 @@ while not kodimonitor.abortRequested():
     kodimonitor.waitForAbort(10)
 
 # stop requested
-log_msg("Abort requested !", xbmc.LOGINFO)
+log_msg("Abort requested !", xbmc.LOGERROR)
 backgrounds_updater.stop()
-log_msg("Stopped", xbmc.LOGINFO)
+log_msg("Stopped", xbmc.LOGERROR)
