@@ -63,6 +63,42 @@
 		</item>
 		<item id="4">
 			<property name="id">$NUMBER[4]</property>
+			<label>discovery+</label>
+			<label2>Favourite</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>C:\Users\media\KodiAutoHDR\portable_data\addons\plugin.video.discoveryplus\resources\icon.png</thumb>
+			<property name="labelID">plugin.video.discoveryplus/</property>
+			<property name="defaultID">plugin.video.discoveryplus/</property>
+			<property name="translatedPath">ActivateWindow(10025,"plugin://plugin.video.discoveryplus/",return)</property>
+			<onclick condition="![Skin.HasSetting(OpenSubMenuOnClick) + Integer.IsGreater(Container(4445).NumItems,0) + ![String.Contains(Skin.String(HomeLayout), netflix) | String.Contains(Skin.String(HomeLayout), win10)]]">ActivateWindow(10025,"plugin://plugin.video.discoveryplus/",return)</onclick>
+			<property name="path">ActivateWindow(10025,"plugin://plugin.video.discoveryplus/",return)</property>
+			<property name="list">plugin://plugin.video.discoveryplus/</property>
+			<onclick condition="[Skin.HasSetting(OpenSubMenuOnClick) + Integer.IsGreater(Container(4445).NumItems,0)] | [String.Contains(Skin.String(HomeLayout), netflix) | String.Contains(Skin.String(HomeLayout), win10)]">SetFocus(4444,0)</onclick>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">plugin-video-discoveryplus</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<label>TV shows</label>
+			<label2>Favourite</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>C:\Users\media\KodiAutoHDR\portable_data\addons\plugin.video.embycon\icon.png</thumb>
+			<property name="labelID">tvshows</property>
+			<property name="defaultID">tvshows-showall</property>
+			<property name="translatedPath">ActivateWindow(10025,"plugin://plugin.video.embycon/?media_type=tvshows&amp;mode=GET_CONTENT&amp;url=%7bserver%7d%2femby%2fUsers%2f%7buserid%7d%2fItems%3fParentId%3d6c2a057148b4d7c20a207c789aba6d07%26Fields%3d%7bfield_filters%7d%26ImageTypeLimit%3d1%26IsMissing%3dFalse%26IncludeItemTypes%3dSeries%26Recursive%3dTrue%26format%3djson",return)</property>
+			<onclick condition="![Skin.HasSetting(OpenSubMenuOnClick) + Integer.IsGreater(Container(4445).NumItems,0) + ![String.Contains(Skin.String(HomeLayout), netflix) | String.Contains(Skin.String(HomeLayout), win10)]]">ActivateWindow(10025,"plugin://plugin.video.embycon/?media_type=tvshows&amp;mode=GET_CONTENT&amp;url=%7bserver%7d%2femby%2fUsers%2f%7buserid%7d%2fItems%3fParentId%3d6c2a057148b4d7c20a207c789aba6d07%26Fields%3d%7bfield_filters%7d%26ImageTypeLimit%3d1%26IsMissing%3dFalse%26IncludeItemTypes%3dSeries%26Recursive%3dTrue%26format%3djson",return)</onclick>
+			<property name="path">ActivateWindow(10025,"plugin://plugin.video.embycon/?media_type=tvshows&amp;mode=GET_CONTENT&amp;url=%7bserver%7d%2femby%2fUsers%2f%7buserid%7d%2fItems%3fParentId%3d6c2a057148b4d7c20a207c789aba6d07%26Fields%3d%7bfield_filters%7d%26ImageTypeLimit%3d1%26IsMissing%3dFalse%26IncludeItemTypes%3dSeries%26Recursive%3dTrue%26format%3djson",return)</property>
+			<property name="list">plugin://plugin.video.embycon/?media_type=tvshows&amp;mode=GET_CONTENT&amp;url=%7bserver%7d%2femby%2fUsers%2f%7buserid%7d%2fItems%3fParentId%3d6c2a057148b4d7c20a207c789aba6d07%26Fields%3d%7bfield_filters%7d%26ImageTypeLimit%3d1%26IsMissing%3dFalse%26IncludeItemTypes%3dSeries%26Recursive%3dTrue%26format%3djson</property>
+			<onclick condition="[Skin.HasSetting(OpenSubMenuOnClick) + Integer.IsGreater(Container(4445).NumItems,0)] | [String.Contains(Skin.String(HomeLayout), netflix) | String.Contains(Skin.String(HomeLayout), win10)]">SetFocus(4444,0)</onclick>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">tvshows</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
 			<label>$LOCALIZE[31062]</label>
 			<label2>youtube</label2>
 			<icon>resource://resource.images.skinicons.wide/youtube.png</icon>
@@ -80,8 +116,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">False</property>
 		</item>
-		<item id="5">
-			<property name="id">$NUMBER[5]</property>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
 			<label>Youtube Channels</label>
 			<label2>Video Add-On</label2>
 			<icon>special://home/addons/resource.images.skinicons.wide/resources/inprogressshows.png</icon>
@@ -100,8 +136,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">False</property>
 		</item>
-		<item id="6">
-			<property name="id">$NUMBER[6]</property>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
 			<label>Hulu</label>
 			<label2>Video Source</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -120,8 +156,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">False</property>
 		</item>
-		<item id="7">
-			<property name="id">$NUMBER[7]</property>
+		<item id="9">
+			<property name="id">$NUMBER[9]</property>
 			<label>Games</label>
 			<label2>Program</label2>
 			<icon>DefaultGames.png</icon>
@@ -138,8 +174,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">False</property>
 		</item>
-		<item id="8">
-			<property name="id">$NUMBER[8]</property>
+		<item id="10">
+			<property name="id">$NUMBER[10]</property>
 			<label>Music</label>
 			<label2>Music Source</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -158,8 +194,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">False</property>
 		</item>
-		<item id="9">
-			<property name="id">$NUMBER[9]</property>
+		<item id="11">
+			<property name="id">$NUMBER[11]</property>
 			<label>$ADDON[script.skinshortcuts 32032]</label>
 			<label2>playdvd</label2>
 			<icon>resource://resource.images.skinicons.wide/videos.png</icon>
@@ -177,27 +213,27 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
 		</item>
-		<item id="10">
-			<property name="id">$NUMBER[10]</property>
+		<item id="12">
+			<property name="id">$NUMBER[12]</property>
 			<label>$LOCALIZE[10040]</label>
-			<label2>Add-on browser</label2>
+			<label2>Custom item</label2>
 			<icon>resource://resource.images.skinicons.wide/addons.png</icon>
 			<thumb />
 			<property name="labelID">10040</property>
 			<property name="defaultID">10040</property>
 			<property name="background">resource://resource.images.skinbackgrounds.titanium/programs.jpg</property>
 			<property name="backgroundName">571</property>
-			<onclick condition="![Skin.HasSetting(OpenSubMenuOnClick) + Integer.IsGreater(Container(4445).NumItems,0) + ![String.Contains(Skin.String(HomeLayout), netflix) | String.Contains(Skin.String(HomeLayout), win10)]]">ActivateWindow(Programs,Addons,return)</onclick>
-			<property name="path">ActivateWindow(Programs,Addons,return)</property>
-			<property name="list">Addons</property>
+			<onclick condition="![Skin.HasSetting(OpenSubMenuOnClick) + Integer.IsGreater(Container(4445).NumItems,0) + ![String.Contains(Skin.String(HomeLayout), netflix) | String.Contains(Skin.String(HomeLayout), win10)]]">ActivateWindow(10025,addons://sources/video/,return)</onclick>
+			<property name="path">ActivateWindow(10025,addons://sources/video/,return)</property>
+			<property name="list">addons://sources/video/</property>
 			<onclick condition="[Skin.HasSetting(OpenSubMenuOnClick) + Integer.IsGreater(Container(4445).NumItems,0)] | [String.Contains(Skin.String(HomeLayout), netflix) | String.Contains(Skin.String(HomeLayout), win10)]">SetFocus(4444,0)</onclick>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="submenuVisibility">num-10040</property>
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
 		</item>
-		<item id="11">
-			<property name="id">$NUMBER[11]</property>
+		<item id="13">
+			<property name="id">$NUMBER[13]</property>
 			<label>$LOCALIZE[10004]</label>
 			<label2>Settings</label2>
 			<icon>resource://resource.images.skinicons.wide/settings.png</icon>
@@ -305,7 +341,7 @@
 		</item>
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
-			<property name="mainmenuid">9</property>
+			<property name="mainmenuid">11</property>
 			<label>$ADDON[script.skinshortcuts 32033]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultDVDFull.png</icon>
@@ -321,7 +357,7 @@
 		</item>
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
-			<property name="mainmenuid">10</property>
+			<property name="mainmenuid">12</property>
 			<label>$LOCALIZE[10001]</label>
 			<label2 />
 			<icon>resource://resource.images.skinicons.wide/programs.png</icon>
@@ -337,7 +373,7 @@
 		</item>
 		<item id="2">
 			<property name="id">$NUMBER[2]</property>
-			<property name="mainmenuid">10</property>
+			<property name="mainmenuid">12</property>
 			<label>$LOCALIZE[1037]</label>
 			<label2 />
 			<icon>resource://resource.images.skinicons.wide/videoaddons.png</icon>
@@ -353,7 +389,7 @@
 		</item>
 		<item id="3">
 			<property name="id">$NUMBER[3]</property>
-			<property name="mainmenuid">10</property>
+			<property name="mainmenuid">12</property>
 			<label>$LOCALIZE[1038]</label>
 			<label2 />
 			<icon>resource://resource.images.skinicons.wide/music.png</icon>
@@ -369,7 +405,7 @@
 		</item>
 		<item id="4">
 			<property name="id">$NUMBER[4]</property>
-			<property name="mainmenuid">10</property>
+			<property name="mainmenuid">12</property>
 			<label>$LOCALIZE[1039]</label>
 			<label2 />
 			<icon>resource://resource.images.skinicons.wide/pictures.png</icon>
@@ -385,7 +421,7 @@
 		</item>
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
-			<property name="mainmenuid">11</property>
+			<property name="mainmenuid">13</property>
 			<label>$LOCALIZE[20077]</label>
 			<label2>Settings</label2>
 			<icon>resource://resource.images.skinicons.wide/settings.png</icon>
@@ -401,7 +437,7 @@
 		</item>
 		<item id="2">
 			<property name="id">$NUMBER[2]</property>
-			<property name="mainmenuid">11</property>
+			<property name="mainmenuid">13</property>
 			<label>$LOCALIZE[10004]</label>
 			<label2>Settings</label2>
 			<icon>resource://resource.images.skinicons.wide/settings.png</icon>
@@ -417,7 +453,7 @@
 		</item>
 		<item id="3">
 			<property name="id">$NUMBER[3]</property>
-			<property name="mainmenuid">11</property>
+			<property name="mainmenuid">13</property>
 			<label>$LOCALIZE[7]</label>
 			<label2>Common Shortcut</label2>
 			<icon>resource://resource.images.skinicons.wide/filemanager.png</icon>
@@ -433,7 +469,7 @@
 		</item>
 		<item id="4">
 			<property name="id">$NUMBER[4]</property>
-			<property name="mainmenuid">11</property>
+			<property name="mainmenuid">13</property>
 			<label>$LOCALIZE[14111]</label>
 			<label2>Common Shortcut</label2>
 			<icon>resource://resource.images.skinicons.wide/settings.png</icon>
@@ -450,7 +486,7 @@
 		</item>
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
-			<property name="mainmenuid">12</property>
+			<property name="mainmenuid">14</property>
 			<label>$LOCALIZE[20126]</label>
 			<label2>Kodi Command</label2>
 			<icon>common/lock.png</icon>
@@ -468,7 +504,7 @@
 		</item>
 		<item id="2">
 			<property name="id">$NUMBER[2]</property>
-			<property name="mainmenuid">12</property>
+			<property name="mainmenuid">14</property>
 			<label>$LOCALIZE[5]</label>
 			<label2>Kodi Command</label2>
 			<icon>common/settings1.png</icon>
@@ -485,7 +521,7 @@
 		</item>
 		<item id="3">
 			<property name="id">$NUMBER[3]</property>
-			<property name="mainmenuid">12</property>
+			<property name="mainmenuid">14</property>
 			<label>$LOCALIZE[13009]</label>
 			<label2>Kodi Command</label2>
 			<icon>common/exit1.png</icon>
@@ -503,7 +539,7 @@
 		</item>
 		<item id="4">
 			<property name="id">$NUMBER[4]</property>
-			<property name="mainmenuid">12</property>
+			<property name="mainmenuid">14</property>
 			<label>$LOCALIZE[13016]</label>
 			<label2>Kodi Command</label2>
 			<icon>common/shutdown1.png</icon>
@@ -520,7 +556,7 @@
 		</item>
 		<item id="5">
 			<property name="id">$NUMBER[5]</property>
-			<property name="mainmenuid">12</property>
+			<property name="mainmenuid">14</property>
 			<label>$LOCALIZE[13013]</label>
 			<label2>Kodi Command</label2>
 			<icon>common/reboot1.png</icon>
@@ -722,6 +758,18 @@
 	<include name="skinshortcuts-group-alt-movies">
 		<description>No items</description>
 	</include>
+	<include name="skinshortcuts-group-plugin-video-discoveryplus">
+		<description>No items</description>
+	</include>
+	<include name="skinshortcuts-group-alt-plugin-video-discoveryplus">
+		<description>No items</description>
+	</include>
+	<include name="skinshortcuts-group-tvshows">
+		<description>No items</description>
+	</include>
+	<include name="skinshortcuts-group-alt-tvshows">
+		<description>No items</description>
+	</include>
 	<include name="skinshortcuts-group-plugin-video-youtube">
 		<description>No items</description>
 	</include>
@@ -755,7 +803,7 @@
 	<include name="skinshortcuts-group-dvd">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
-			<property name="mainmenuid">9</property>
+			<property name="mainmenuid">11</property>
 			<label>$ADDON[script.skinshortcuts 32033]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultDVDFull.png</icon>
@@ -773,7 +821,7 @@
 	<include name="skinshortcuts-group-alt-dvd">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
-			<property name="mainmenuid">9</property>
+			<property name="mainmenuid">11</property>
 			<label>$ADDON[script.skinshortcuts 32033]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultDVDFull.png</icon>
@@ -791,7 +839,7 @@
 	<include name="skinshortcuts-group-num-10040">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
-			<property name="mainmenuid">10</property>
+			<property name="mainmenuid">12</property>
 			<label>$LOCALIZE[10001]</label>
 			<label2 />
 			<icon>resource://resource.images.skinicons.wide/programs.png</icon>
@@ -807,7 +855,7 @@
 		</item>
 		<item id="2">
 			<property name="id">$NUMBER[2]</property>
-			<property name="mainmenuid">10</property>
+			<property name="mainmenuid">12</property>
 			<label>$LOCALIZE[1037]</label>
 			<label2 />
 			<icon>resource://resource.images.skinicons.wide/videoaddons.png</icon>
@@ -823,7 +871,7 @@
 		</item>
 		<item id="3">
 			<property name="id">$NUMBER[3]</property>
-			<property name="mainmenuid">10</property>
+			<property name="mainmenuid">12</property>
 			<label>$LOCALIZE[1038]</label>
 			<label2 />
 			<icon>resource://resource.images.skinicons.wide/music.png</icon>
@@ -839,7 +887,7 @@
 		</item>
 		<item id="4">
 			<property name="id">$NUMBER[4]</property>
-			<property name="mainmenuid">10</property>
+			<property name="mainmenuid">12</property>
 			<label>$LOCALIZE[1039]</label>
 			<label2 />
 			<icon>resource://resource.images.skinicons.wide/pictures.png</icon>
@@ -857,7 +905,7 @@
 	<include name="skinshortcuts-group-alt-num-10040">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
-			<property name="mainmenuid">10</property>
+			<property name="mainmenuid">12</property>
 			<label>$LOCALIZE[10001]</label>
 			<label2 />
 			<icon>resource://resource.images.skinicons.wide/programs.png</icon>
@@ -873,7 +921,7 @@
 		</item>
 		<item id="2">
 			<property name="id">$NUMBER[2]</property>
-			<property name="mainmenuid">10</property>
+			<property name="mainmenuid">12</property>
 			<label>$LOCALIZE[1037]</label>
 			<label2 />
 			<icon>resource://resource.images.skinicons.wide/videoaddons.png</icon>
@@ -889,7 +937,7 @@
 		</item>
 		<item id="3">
 			<property name="id">$NUMBER[3]</property>
-			<property name="mainmenuid">10</property>
+			<property name="mainmenuid">12</property>
 			<label>$LOCALIZE[1038]</label>
 			<label2 />
 			<icon>resource://resource.images.skinicons.wide/music.png</icon>
@@ -905,7 +953,7 @@
 		</item>
 		<item id="4">
 			<property name="id">$NUMBER[4]</property>
-			<property name="mainmenuid">10</property>
+			<property name="mainmenuid">12</property>
 			<label>$LOCALIZE[1039]</label>
 			<label2 />
 			<icon>resource://resource.images.skinicons.wide/pictures.png</icon>
@@ -923,7 +971,7 @@
 	<include name="skinshortcuts-group-settings">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
-			<property name="mainmenuid">11</property>
+			<property name="mainmenuid">13</property>
 			<label>$LOCALIZE[20077]</label>
 			<label2>Settings</label2>
 			<icon>resource://resource.images.skinicons.wide/settings.png</icon>
@@ -939,7 +987,7 @@
 		</item>
 		<item id="2">
 			<property name="id">$NUMBER[2]</property>
-			<property name="mainmenuid">11</property>
+			<property name="mainmenuid">13</property>
 			<label>$LOCALIZE[10004]</label>
 			<label2>Settings</label2>
 			<icon>resource://resource.images.skinicons.wide/settings.png</icon>
@@ -955,7 +1003,7 @@
 		</item>
 		<item id="3">
 			<property name="id">$NUMBER[3]</property>
-			<property name="mainmenuid">11</property>
+			<property name="mainmenuid">13</property>
 			<label>$LOCALIZE[7]</label>
 			<label2>Common Shortcut</label2>
 			<icon>resource://resource.images.skinicons.wide/filemanager.png</icon>
@@ -971,7 +1019,7 @@
 		</item>
 		<item id="4">
 			<property name="id">$NUMBER[4]</property>
-			<property name="mainmenuid">11</property>
+			<property name="mainmenuid">13</property>
 			<label>$LOCALIZE[14111]</label>
 			<label2>Common Shortcut</label2>
 			<icon>resource://resource.images.skinicons.wide/settings.png</icon>
@@ -990,7 +1038,7 @@
 	<include name="skinshortcuts-group-alt-settings">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
-			<property name="mainmenuid">11</property>
+			<property name="mainmenuid">13</property>
 			<label>$LOCALIZE[20077]</label>
 			<label2>Settings</label2>
 			<icon>resource://resource.images.skinicons.wide/settings.png</icon>
@@ -1006,7 +1054,7 @@
 		</item>
 		<item id="2">
 			<property name="id">$NUMBER[2]</property>
-			<property name="mainmenuid">11</property>
+			<property name="mainmenuid">13</property>
 			<label>$LOCALIZE[10004]</label>
 			<label2>Settings</label2>
 			<icon>resource://resource.images.skinicons.wide/settings.png</icon>
@@ -1022,7 +1070,7 @@
 		</item>
 		<item id="3">
 			<property name="id">$NUMBER[3]</property>
-			<property name="mainmenuid">11</property>
+			<property name="mainmenuid">13</property>
 			<label>$LOCALIZE[7]</label>
 			<label2>Common Shortcut</label2>
 			<icon>resource://resource.images.skinicons.wide/filemanager.png</icon>
@@ -1038,7 +1086,7 @@
 		</item>
 		<item id="4">
 			<property name="id">$NUMBER[4]</property>
-			<property name="mainmenuid">11</property>
+			<property name="mainmenuid">13</property>
 			<label>$LOCALIZE[14111]</label>
 			<label2>Common Shortcut</label2>
 			<icon>resource://resource.images.skinicons.wide/settings.png</icon>
@@ -1057,7 +1105,7 @@
 	<include name="skinshortcuts-group-powermenu">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
-			<property name="mainmenuid">12</property>
+			<property name="mainmenuid">14</property>
 			<label>$LOCALIZE[20126]</label>
 			<label2>Kodi Command</label2>
 			<icon>common/lock.png</icon>
@@ -1075,7 +1123,7 @@
 		</item>
 		<item id="2">
 			<property name="id">$NUMBER[2]</property>
-			<property name="mainmenuid">12</property>
+			<property name="mainmenuid">14</property>
 			<label>$LOCALIZE[5]</label>
 			<label2>Kodi Command</label2>
 			<icon>common/settings1.png</icon>
@@ -1092,7 +1140,7 @@
 		</item>
 		<item id="3">
 			<property name="id">$NUMBER[3]</property>
-			<property name="mainmenuid">12</property>
+			<property name="mainmenuid">14</property>
 			<label>$LOCALIZE[13009]</label>
 			<label2>Kodi Command</label2>
 			<icon>common/exit1.png</icon>
@@ -1110,7 +1158,7 @@
 		</item>
 		<item id="4">
 			<property name="id">$NUMBER[4]</property>
-			<property name="mainmenuid">12</property>
+			<property name="mainmenuid">14</property>
 			<label>$LOCALIZE[13016]</label>
 			<label2>Kodi Command</label2>
 			<icon>common/shutdown1.png</icon>
@@ -1127,7 +1175,7 @@
 		</item>
 		<item id="5">
 			<property name="id">$NUMBER[5]</property>
-			<property name="mainmenuid">12</property>
+			<property name="mainmenuid">14</property>
 			<label>$LOCALIZE[13013]</label>
 			<label2>Kodi Command</label2>
 			<icon>common/reboot1.png</icon>
@@ -1146,7 +1194,7 @@
 	<include name="skinshortcuts-group-alt-powermenu">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
-			<property name="mainmenuid">12</property>
+			<property name="mainmenuid">14</property>
 			<label>$LOCALIZE[20126]</label>
 			<label2>Kodi Command</label2>
 			<icon>common/lock.png</icon>
@@ -1164,7 +1212,7 @@
 		</item>
 		<item id="2">
 			<property name="id">$NUMBER[2]</property>
-			<property name="mainmenuid">12</property>
+			<property name="mainmenuid">14</property>
 			<label>$LOCALIZE[5]</label>
 			<label2>Kodi Command</label2>
 			<icon>common/settings1.png</icon>
@@ -1181,7 +1229,7 @@
 		</item>
 		<item id="3">
 			<property name="id">$NUMBER[3]</property>
-			<property name="mainmenuid">12</property>
+			<property name="mainmenuid">14</property>
 			<label>$LOCALIZE[13009]</label>
 			<label2>Kodi Command</label2>
 			<icon>common/exit1.png</icon>
@@ -1199,7 +1247,7 @@
 		</item>
 		<item id="4">
 			<property name="id">$NUMBER[4]</property>
-			<property name="mainmenuid">12</property>
+			<property name="mainmenuid">14</property>
 			<label>$LOCALIZE[13016]</label>
 			<label2>Kodi Command</label2>
 			<icon>common/shutdown1.png</icon>
@@ -1216,7 +1264,7 @@
 		</item>
 		<item id="5">
 			<property name="id">$NUMBER[5]</property>
-			<property name="mainmenuid">12</property>
+			<property name="mainmenuid">14</property>
 			<label>$LOCALIZE[13013]</label>
 			<label2>Kodi Command</label2>
 			<icon>common/reboot1.png</icon>
