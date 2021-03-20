@@ -146,7 +146,7 @@
                     <textwidth>540</textwidth>
                     <texturenofocus>dialogs/default/separator.png</texturenofocus>
                     <label>$LOCALIZE[126]</label>
-                    <label2>$INFO[ListItem.Property(Addon.Status)]$INFO[ListItem.Property(Addon.ValidUpdateVersion),[CR]($LOCALIZE[19114]: ,)]</label2>
+                    <label2>$INFO[ListItem.Property(Addon.Status)]$INFO[ListItem.Property(Addon.ValidUpdateVersion), ($LOCALIZE[19114]: ,)]</label2>
                     <enable>false</enable>
 					<disabledcolor>$INFO[Skin.String(GeneralTextColor)]</disabledcolor>
                 </control>
